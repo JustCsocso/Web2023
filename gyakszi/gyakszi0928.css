@@ -1,0 +1,30 @@
+body{
+    background-color: beige;
+}
+
+label{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+input{
+    border: 2px solid rgb(122, 122, 184);
+}
+a[target="_blank"]{}
+input[type="text"]{
+    width: 300px;
+}
+input[type="checkbox"]{
+    margin: 10px;
+}
+input[type="password"]{
+    background-color: cornflowerblue;
+}
+
+input[name~="kor"]{
+    background-color: black;
+}
+[class*="te"]{
+    background: yellow;
+}

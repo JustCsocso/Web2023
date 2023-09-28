@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <title>Focisták</title> 
+        <link rel="stylesheet" href="gyakszi0928.css">
+    </head>
+    <body>
+        <form action="">
+            <fieldset>
+                <legend>Focista</legend>
+                <label for="fname">Vezeteknev:</label>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Keresztnev:</label>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="kor">Kora:</label>
+                <input type="text" id="kor" name="kor"><br>
+                <label for="csapat">Csapata:</label>
+                <input type="text" id="csapat" name="csapat"><br>
+                <label for="password">Password:</label>
+                <input type="text" name="password" id="password"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Kedvenc ligad: </legend>
+                <label for="angol">Premier league</label>
+                <input type="checkbox" name="angol" id="angol"><br>
+                <label for="spanyol">LaLiga:</label>
+                <input type="checkbox" name="spanyol" id="spanyol"><br>
+                <label for="olasz">Italy</label>
+                <input type="checkbox" name="olasz" id="olasz"><br>
+                <label for="francia">Francia:</label>
+                <input type="checkbox" name="francia" id="francia"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Csoport</legend>
+                <label for="lany">Noi foci:</label>
+                <input type="radio" name="lany" id="lany"><br>
+                <label for="fiu">Ferfi foci:</label>
+                <input type="radio" name="fiu" id="fiu"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Ki a jobb?</legend>
+                <label for="foca">Ki a jobb?</label>
+                    <select name="foca" id="foca" form="focaa">
+                    <option value="messi">Messi</option>
+                    <option value="rona">Ronaldo</option>
+                    </select>
+                
+                <p><label for="miert">Miert?</label></p>
+                <textarea id="miert" name="mert" rows="4" cols="50">
+                </textarea>
+                <br>
+            </fieldset>
+            <input type="submit" value="befejez">
+            <button type="kesz" form="kesz" value="kesz">Kesz</button>
+            
+
+
+        </form>
+        
+    </body>
+</html>
