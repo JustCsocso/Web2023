@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale"> 
+        <title>Doc</title>
+    </head>
+    <body>
+        <div id="info">Ide jön valami</div>
+        <div class="info">Ide jön valami1</div>
+        <div class="info">Ide jön valami2</div>
+        <div class="info">Ide jön valami3</div>
+        <div class="info">Ide jön valami4</div>
+        <div class="info">Ide jön valami5</div>
+        <p class="info">Ide jön valami6</p>
+        
+
+        <script>
+            const elem=document.getElementById("info");
+            console.log(elem)
+            elem.innerHTML="nap vége";
+
+            elem=document.getElementsByTagName("div");
+            console.log(elem)
+            elem[3].innerHTML+="Valami";
+            
+            elem=document.getElementsByTagName("h2");
+            console.log(elem)
+        </script>
+    </body>
+</html>

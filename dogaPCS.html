@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Doga</title>
+        <link rel="stylesheet" href="doga.css">
+    </head>
+    <body>
+        <form method="get"">
+            <fieldset >
+                <legend>Belépési adatok</legend>
+                <label for="nev">Belépési név</label><br>
+                <input type="text" name="Nev" id="nev" placeholder="Próba Jóska" style="background-color: aquamarine;"><br>
+                <label for="email">Email</label><br>
+                <input type="text" name="Emailod" id="email" placeholder="nincs@om.hu" ><br>
+                <label for="jelszo">Jelszó</label><br>
+                <input type="password" name="jelszód" id="jelszo" placeholder="123456" ><br>
+            </fieldset>
+            <fieldset>
+                <legend>Személyes adatok</legend>
+                <label for="szuld">Születési dátum</label>
+                <input type="date" name="szuld" id="szuld"><br>
+                <p>Nem</p>
+                <label for="ferfi">Férfi</label>
+                <input type="radio" name="ferfi" id="ferfi">
+                <label for="no">Nő</label>
+                <input type="radio" name="no" id="no">
+                <label for="egy">Egyeb</label>
+                <input type="radio" name="egy" id="egy"><br>
+                <label for="varos">Születései hely</label>
+                <select name="varos" id="varos">
+                    <option value="nagyatad">Nagyatad</option>
+                    <option value="segesd">Segesd</option>
+                    <option value="csurgo">Csurgó</option>
+                </select>
+                
+            </fieldset>
+            <fieldset>
+                <legend>Egyéb</legend>
+                <p>Allergia</p>
+                <input type="checkbox" name=mogyoro"" id="mogy" value="mogyoro">
+                <label for="mogy">Mogyoró</label>
+                <input type="checkbox" name=tejcsi"" id="tej" value="tej">
+                <label for="tej">Tej</label>
+                <input type="checkbox" name=vas"" id="vas" value="vas">
+                <label for="vas">Vas</label>
+                <input type="checkbox" name=nap"" id="nap" value="nap">
+                <label for="nap">Nap</label>
+                <input type="checkbox" name=pollen"" id="pollen" value="pollen">
+                <label for="pollen">Pollen</label>
+                
+            </fieldset>
+            <fieldset>
+                <legend>Gombok</legend>
+                <input  type="reset" name="reset" id="reset" value="Törlés" style="background-color: aquamarine; " style="text-align: justify;">
+                <input  type="submit" name="submit" id="submit" value="Mentés" style="background-color: aquamarine;" style="text-align: justify;">
+            </fieldset>
+        </form>
+    </body>
+</html>

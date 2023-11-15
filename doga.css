@@ -1,0 +1,14 @@
+fieldset{
+    background-color: lightgreen;
+    width: 500px;
+    margin: auto;
+    border: double 3px white;
+}
+input{
+    font-size: medium;
+}
+legend{
+    background-color: lightgreen;
+    color: green;
+    border: solid 1px black;
+}
