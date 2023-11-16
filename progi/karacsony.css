@@ -1,0 +1,125 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.hatter, .fu{
+    position: relative;
+}
+
+.hatter{
+    height: 70%;
+    background: #87ceeb;
+    animation-name: hatter;
+    animation-duration: 30s;
+
+    
+
+}
+
+
+.fu{
+    height: 30%;
+    background: rgb(32, 160, 32);
+}
+
+
+.felho1{
+    width: 300px;
+    height: 300px;
+    animation-name: felho1;
+    animation-duration: 70s;
+    animation-iteration-count: 1;
+   
+}
+.felho2{
+    width: 300px;
+    height: 300px;
+    animation-name: felho2;
+    animation-duration: 60s;
+    animation-iteration-count: 1;
+}
+
+.spongya{
+    width: 200px;
+    height: 250px;
+    animation-name: spongya;
+    animation-duration: 10s;
+    animation-iteration-count: 3;
+    animation-delay: 1s;
+    
+}
+.patrik{
+    width: 250px;
+    height: 280px;
+    animation-name: patrik;
+    animation-duration: 10s;
+    animation-iteration-count: 3;
+    animation-delay: 1s;
+}
+
+.meduza{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 180px;
+    animation-name: meduza;
+    animation-iteration-count: 3;
+    animation-duration: 10s;
+}
+.nap{
+    width: 200px;
+    height: 200px;
+    margin-left: 1600px;
+    margin-top: -1500px;
+    animation-name: nap;
+    animation-duration: 15s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+
+}
+
+.hold{
+    width: 200px;
+    height: 200px;
+    margin-left: 1600px;
+    margin-top: 350px;
+    animation-name: hold;
+    animation-duration: 18s;
+    animation-delay: 13s;
+}
+
+@keyframes felho1{
+    from{transform: translateX(-300px);}
+    to{transform: translateX(1920px);}
+}
+@keyframes felho2{
+    from{transform: translateX(700px);}
+    to{transform: translateX(1920px);}
+}
+@keyframes spongya{
+    from{transform: translateX(0px);}
+    to{transform: translateX(1920px);}
+}
+@keyframes patrik{
+    from{transform: translateX(0px);}
+    to{transform: translateX(1920px);}
+}
+@keyframes meduza{
+    from{transform: translateX(0px);}
+    to{transform: translateX(1920px);}
+}
+@keyframes hatter{
+    0%{background-color: skyblue;}
+    50%{background-color: blue;}
+    100%{background-color: navy;}
+}
+@keyframes nap{
+    from{transform: translateY(0px);}
+    to{transform: translateY(600px);}
+}
+
+@keyframes hold{
+    from{transform:translateY(0px)}
+    to{transform: translateY(-600px);}
+}
