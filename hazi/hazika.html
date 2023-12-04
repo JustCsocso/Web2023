@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="button"]
+        {
+            width: 50px;
+            height: 50px;
+        }
+        #nulla
+        {
+            width: 104px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function gombnyomas()
+        {
+            let be=document.getElementById("szoveg");
+            console.log(be);
+            let cim1=document.getElementsByTagName("h1");
+            console.log(cim1[0].innerHTML);
+            cim1[0].innerHTML=be.value;
+        }
+
+        function nyomas(ertek)
+        {
+            let k=document.getElementById("kijelzo");
+            if(ertek==="C")
+            {
+                k.innerHTML="0"
+            }
+            else
+            {
+                if(k.innerHTML==="0")
+                {
+                    k.innerHTML="";
+                }
+                k.innerHTML+=ertek;
+            }
+            
+        }
+        let before=0;
+        let elozomuvelet="+";
+        function muvelet(jel)
+        {
+            if(elozomuvelet==="+")
+            {
+                before+=parseInt(document.getElementById("kijelzo").innerHTML);
+                elozomuvelet=jel;
+            }
+            if(elozomuvelet==="-")
+            {
+                before-=parseInt(document.getElementById("kijelzo").innerHTML);
+                elozomuvelet=jel;
+            }
+            else if(beforMuvelet==="/"){
+                before/=parseInt(document.getElementById("kijelzo").innerHTML)
+            }
+            else if(elozomuvelet==="*"){
+                before*=parseInt(document.getElementById("kijelzo").innerHTML)
+            }
+            
+            document.getElementById("kijelzo").innerHTML="0";
+            console.log(jel,before,);
+
+        }
+    </script>
+    <h1></h1>
+    <form>
+        <input type="text" id="szoveg" onkeypress="gombnyomas()">
+    </form>
+
+    <h1>szamologep</h1>
+    <div id="kijelzo">0</div>
+    <form>
+        <input type="button" value="7" id="" onclick="nyomas('7')">
+        <input type="button" value="8" id="" onclick="nyomas('8')">
+        <input type="button" value="9" id="" onclick="nyomas('9')">
+        <input type="button" value="+" id="" onclick="muvelet('+')"><br>
+        <input type="button" value="4" id="" onclick="nyomas('4')">
+        <input type="button" value="5" id="" onclick="nyomas('5')">
+        <input type="button" value="6" id="" onclick="nyomas('6')">
+        <input type="button" value="-" id="" onclick="muvelet('-')"><br>
+        <input type="button" value="1" id="" onclick="nyomas('1')">
+        <input type="button" value="=" id="" onclick="nyomas('=')">
+        <input type="button" value="2" id="" onclick="nyomas('2')">
+        <input type="button" value="3" id="" onclick="nyomas('3')">
+        <input type="button" value="*" id="" onclick="muvelet('*')"><br>
+        <input type="button" value="0" id="nulla" onclick="nyomas('0')">
+        <input type="button" value="C" id="" onclick="nyomas('C')">
+        <input type="button" value="/" id="" onclick="muvelet('/')">
+    </form>
+
+</body>
+</html>
