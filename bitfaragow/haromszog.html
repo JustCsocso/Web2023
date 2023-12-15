@@ -5,13 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <label for="a">A oldala:</label>
-    <p><input type="text"></p>
-    <label for="b">B oldala:</label>
-    <p><input type="text"></p>
-    <label for="c">C oldala:</label>
-    <p><input type="text" ></p>
+<body style="background-color: antiquewhite;">
+    <h1>A háromszög hegyes, tompa vagy derékszőgű?</h1>
+    <button onclick="haromszog()" style="border: 1px solid black;">Nyomjad</button>
+    <p id="demo"></p>
+    
+    
 
+    <script>
+        function haromszog(){
+            var x;
+
+            var a=prompt("Kérem a háromszög A oldalát: ","pl.5cm");
+            var b=prompt("Kérem a háromszög B oldalát: ","pl.6cm");
+            var c=prompt("Kérem a háromszög C oldalát: ","pl.7cm");
+            var negyzet=(parseInt(c)*parseInt(c))-(parseInt(a)*parseInt(a))-(parseInt(b)*parseInt(b));
+            console.log(negyzet);
+            
+            if(negyzet==0){
+                x="Ez a háromszög derékszögű";
+                document.getElementById("demo").innerHTML=x;
+            }
+            else if(negyzet>0){
+                y="Ez a háromszög tompaszögű";
+                document.getElementById("demo").innerHTML=y;
+            }
+            else {
+                z="Ez a háromszög hegyesszögű";
+                document.getElementById("demo").innerHTML=z;
+            }
+        
+        }
+    
+    </script>
+    
 </body>
 </html>
