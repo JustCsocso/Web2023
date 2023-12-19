@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: bisque;">
+    <h1>Prímszám-e amit beirtál?</h1>
+    
+    <button onclick="primszam()">Szám bekérés</button>
+    <p id="kuka"></p>
+    <script>
+        function primszam()
+        {
+            var prim=parseInt(prompt("Kérek egy számot: "));
+            var primszamok=true;
+            console.log(prim);
+
+            if(prim==1){
+                primszamok=false;
+                var egy="Egy az nem prímszam";
+                document.getElementById("kuka").innerHTML=egy;
+            }
+            else if(prim>1)
+            {
+                for(i=2;i<prim;i++)
+                {
+                    if(prim %i == 0)
+                    {
+                        primszamok=false;
+                        break;
+                    }
+
+                }
+            
+            }
+            if(primszamok)
+            {
+                var igen="Prímszám";
+                document.getElementById("kuka").innerHTML=igen;
+            }
+            else
+            {
+                var nem="Nem prímszám";
+                document.getElementById("kuka").innerHTML=nem;
+            }
+                
+            
+            
+        }
+    </script>
+    
+</body>
+</html>

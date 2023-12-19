@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: aqua;">
     <script>
         function idopont(){
             var x;
-            var ora1=prompt("Kérem egy órat: ","12 óra")
-            var perc1=prompt("Kérek egy percet: ","13 perc")
-            var ms1=prompt("Kérem egy másodperc: ","30 másodperc")
+            var ora1=prompt("Kérem egy órat: ","12 óra");
+            var perc1=prompt("Kérek egy percet: ","13 perc");
+            var ms1=prompt("Kérem egy másodperc: ","30 másodperc");
             
-            var ora2=prompt("Kérem egy korábbi órat: ","12 óra")
-            var perc2=prompt("Kérek egy korábbi percet: ","13 perc")
-            var ms2=prompt("Kérem egy korábbi másodpercet: ","30 másodperc")
+            var ora2=prompt("Kérem egy korábbi órat: ","12 óra");
+            var perc2=prompt("Kérek egy korábbi percet: ","13 perc");
+            var ms2=prompt("Kérem egy korábbi másodpercet: ","30 másodperc");
+
+            var oraossz=parseInt(ora2)-parseInt(ora1);
+            var percossz=parseInt(perc2)-parseInt(perc1);
+            var msossz=parseInt(ms2)-parseInt(ms1);
+            console.log(oraossz);
+            console.log(percossz);
+            console.log(msossz);
+
+            document.getElementById("demo").innerHTML="Óra: "+oraossz+"perc: "+percossz+"ms: "+msossz;
         }
     </script>
-    <p>Óra bekérés</p>
+    <p style="font-size: larger;" id="demo">Óra bekérés</p>
     <button onclick="idopont()">Időpont</button>
 </body>
 </html>
