@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function beir(){
+            const be=document.getElementById("szoveg").value;
+            console.log(be);
+            document.getElementById("bence").innerHTML="<div>" + be + "</div>"+document.getElementById("bence").innerHTML;
+            /*
+            document.getElementById("bence").innerHTML="<div>" + be + "</div>"+document.getElementById("bence").innerHTML+"<div>" + be + "</div>";
+            */
+            document.getElementById("szoveg").value="";
+        }
+    </script>
+    <form>
+        <h1>Szia</h1>
+        <label for="szoveg">Szöveg: </label>
+        <input type="text" id="szoveg">
+        <input type="submit" value="Rögzít" onclick="beir();return false;">
+    </form>
+    <div id="bence"></div>
+</body>
+</html>
