@@ -20,12 +20,22 @@
 
         function gombDisz()
         {
+            let maxH=700;
+            let maxW=534;
+
+            let magassag=rand(0,maxH);
+
+            let arany=maxW/maxH*magassag;
+
             let elem=document.createElement("img");
             elem.src="gomb.jpg";
-            elem.style.height=rand(30,100s)+"px";
+            elem.style.height=rand(30,100)+"px";
             elem.style.position="absolute";
             elem.style.left=rand(50,300)+"px";
             elem.style.top=rand(100,400)+"px";
+
+            let szelesseg=maxW/2+rand(-1*arany,arany);
+
 
             document.getElementById("fenyo").appendChild(elem);
             //console.log(document.getElementById("fenyo"));
