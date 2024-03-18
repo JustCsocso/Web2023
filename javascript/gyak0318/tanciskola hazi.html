@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Latin tancok</h1>
+
+    
+    <div class="gomb" id="pepa" onclick="feladat2()">2.Feladat</div>
+    <div class="megoldas" id="feladat2"></div>
+    <div class="gomb" id="D"  onclick="feladat3()">3.Feladat</div>
+    <div class="megoldas" id="feladat3"></div>
+    <div class="gomb" id="Martin" onclick="feladat4()">4.Feladat</div>
+    <div class="megoldas" id="feladat4"></div>
+        <script>
+        class  Par
+        {
+            constructor(tancNev,lanyNev,fiuNev)
+            {
+                this.tanc=tancNev;
+                this.fiu=fiuNev;
+                this.lany=lanyNev;
+            }
+        }
+        
+        const forras="cha-cha\nLuca\nKelemen\ncha-cha\nKatalin\nBertalan\ncha-cha\nAdrienn\nLajos\ncha-cha\nEmma\nIgor\ncha-cha\nVilma\nKolos\ncha-cha\nSzilvia\nAlfonz\ncha-cha\nElza\nTivadar\ncha-cha\nFruzsina\nEde\nsalsa\nSzilvia\nImre\nsalsa\nJudit\nAttila\nsalsa\nKatalin\nBertalan\nsalsa\nGabriella\nKelemen\nsalsa\nIrma\nKolos\nsalsa\nFruzsina\nTivadar\nrumba\nEmma\nAlfonz\nrumba\nSzilvia\nAttila\nrumba\nKatalin\nBertalan\nrumba\nAdrienn\nLajos\nrumba\nLuca\nKelemen\nrumba\nJudit\nKolos\nrumba\nElza\nSalamon\nrumba\nVilma\nImre\nrumba\nFruzsina\nTivadar\nrumba\nIrma\nMarcell\nsamba\nGabriella\nAlfonz\nsamba\nSzilvia\nIgor\nsamba\nElza\nKelemen\nsamba\nKatalin\nBertalan\nsamba\nAdrienn\nLajos\nsamba\nEmma\nKolos\nsamba\nLuca\nAttila\nsamba\nIrma\nImre\nsamba\nSzabina\nEde\nsamba\nFruzsina\nMarcell\njive\nEmma\nAttila\njive\nKatalin\nBertalan\njive\nElza\nKelemen\njive\nJudit\nKolos\njive\nIrma\nMarcell\njive\nSzilvia\nAlfonz\ntango\nVilma\nTivadar\ntango\nKatalin\nBertalan\ntango\nAdrienn\nLajos\ntango\nIrma\nKolos\ntango\nLuca\nSalamon\ntango\nEmma\nImre\ntango\nGabriella\nIgor\ntango\nElza\nAlfonz\ntango\nJudit\nAttila\ntango\nSzilvia\nKelemen\ntango\nFruzsina\nEde\ntango\nSzabina\nMarcell\nbachata\nKatalin\nBertalan\nbachata\nEmma\nKelemen\nbachata\nIrma\nEde\nbachata\nSzilvia\nIgor\nbachata\nLuca\nAlfonz\nbachata\nElza\nAttila\n"
+        const sorok=forras.trimEnd().split("\n");
+        //console.log(sorok);
+
+        const tancok=[];
+        
+        for(let i=0;i<sorok.length;i+=3)
+        {
+            //console.log(i,sorok[i],sorok[i+1],sorok[i+2])
+            tancok.push(new Par(sorok[i],sorok[i+1],sorok[i+2]));
+            
+        }
+
+        function feladat2()
+        {
+
+            const szoveg="Az elsőként bemutatott tánc a"+ tancok[0].tanc+"volt, az utolsó pedig "+tancok[tancok.length-1].tanc+".";
+            ir("feladat2",szoveg);
+        }
+
+        function feladat3()
+        {
+            let darab=0;
+            tancok.forEach(function(ertek){
+                if(ertek.tanc=="samba")
+                darab++;
+            })
+            console.log(darab)
+
+            document.getElementById("feladat3").innerHTML="szoveg";
+            ir("feladat3","Samba-t "+darab+"pár tancolt.");
+
+        }
+        //console.log(tancok);
+        function ir(hova,mit)
+        {
+            document.getElementById(hova).innerHTML=mit;
+        }
+
+        function feladat4()
+        {
+            const villmaTancai=tancok.filter(function(v){
+                if(v.lany=="Vilma")
+                return v;
+            })
+            ir("feladat4","Vilma a következő táncokat tánconlta: "+villmaTancai);
+            console.log(villmaTancai);
+        }
+       
+    </script>
+
+    <img src="mami.jpg" class="mammer">
+    <style>
+        .gomb{
+            border:1px solid rgb(0, 0, 0);
+            width: 60px;
+            background-color: forestgreen;
+            margin-top: 3px;
+            }
+        img
+        {
+            border: 1px solid rgb(0, 0, 0);
+            background-color: forestgreen;
+            border-top-width: 4px;
+            border-right-width :40px; 
+            ;
+        }
+    </style>
+</body>
+</html>
